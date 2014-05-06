@@ -55,7 +55,7 @@ public class NavigationController : MonoBehaviour {
   private void ShowWindow(WindowTransitioner window) {
     window.Show();
     CurrentWindow = window;
-    Analytics.changeScreen(window.Name);
+    //Analytics.changeScreen(window.Name);
   }
 
   public void TransitionTo(WindowTransitioner window) {
