@@ -30,7 +30,7 @@ public class WindowTransitioner : MonoBehaviour {
 
   private IEnumerator WaitThenDisable(Action callback) {
     yield return new WaitForSeconds(ANIMATION_TIME);
-    gameObject.SetActive(true);
+    gameObject.SetActive(false);
     callback();
   }
 

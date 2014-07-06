@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 427871075}
   - 20: {fileID: 427871077}
   - 114: {fileID: 427871076}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1840034275}
   - 114: {fileID: 1840034274}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Windows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - 114: {fileID: 2117836506}
   - 114: {fileID: 2117836505}
   - 54: {fileID: 2117836504}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: UI Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

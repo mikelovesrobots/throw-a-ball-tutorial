@@ -1,16 +1,22 @@
 using UnityEngine;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 public class NavigationController : MonoBehaviour {
   public string WindowGroup;
   public WindowTransitioner[] Windows;
   public WindowTransitioner StartingWindow;
   private WindowTransitioner currentWindow;
+  private Stack<WindowTransitioner> HistoryStack = new Stack<WindowTransitioner>();
 
-  private void Start() {
-    if (IsReturning) {
-      ShowWindow(ReturningWindow);
+  public void Initialize() {
+    Initialize(null);
+  }
+
+  public void Initialize(WindowTransitioner windowOverride) {
+    if (windowOverride != null) {
+      ShowWindow(windowOverride);
     } else if (HasStartingWindow) {
       ShowWindow(StartingWindow);
     }
@@ -53,12 +59,11 @@ public class NavigationController : MonoBehaviour {
   }
 
   private void ShowWindow(WindowTransitioner window) {
-    window.Show();
     CurrentWindow = window;
-    //Analytics.changeScreen(window.Name);
+    window.Show();
   }
 
-  public void TransitionTo(WindowTransitioner window) {
+  private void TransitionTo(WindowTransitioner window) {
     Action ShowNextWindow = () => {
       ShowWindow(window);
     };
@@ -70,25 +75,21 @@ public class NavigationController : MonoBehaviour {
     }
   }
 
+  public void Push(WindowTransitioner window) {
+    if (CurrentWindow != null) {
+      HistoryStack.Push(CurrentWindow);
+    }
+
+    TransitionTo(window);
+  }
+
+  public void Pop() {
+    TransitionTo(HistoryStack.Pop());
+  }
+
   private WindowTransitioner CurrentWindow {
-    set { 
-      currentWindow = value; 
-      HomeOptions.WindowRegistry.Register(WindowGroup, value.gameObject.name);
-    }
-    get { 
-      return currentWindow;
-    }
-  }
-
-  private bool IsReturning {
-    get { return HomeOptions.WindowRegistry.Exists(WindowGroup); }
-  }
-
-  private WindowTransitioner ReturningWindow {
-    get { 
-      var lastWindowName = HomeOptions.WindowRegistry.Find(WindowGroup);
-      return Windows.Single(window => window.gameObject.name == lastWindowName); 
-    }
+    set { currentWindow = value; }
+    get { return currentWindow; }
   }
 
   private bool HasStartingWindow {
