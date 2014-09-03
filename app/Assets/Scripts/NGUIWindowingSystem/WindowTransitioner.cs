@@ -6,6 +6,7 @@ public class WindowTransitioner : MonoBehaviour {
   private const float ANIMATION_TIME = 0.25f;
   public UIPanel[] Panels;
   public WindowInitializer OptionalWindowInitializer;
+  public WindowDisabler OptionalWindowDisabler;
 
   public string Name {
     get { return gameObject.name; }
@@ -20,7 +21,7 @@ public class WindowTransitioner : MonoBehaviour {
   }
 
   public void Hide() {
-    Hide(() => {});
+    Hide(NotifyWindowDisabler);
   }
 
   public void Hide(Action callback) {
@@ -30,8 +31,15 @@ public class WindowTransitioner : MonoBehaviour {
 
   private IEnumerator WaitThenDisable(Action callback) {
     yield return new WaitForSeconds(ANIMATION_TIME);
+    NotifyWindowDisabler();
     gameObject.SetActive(false);
     callback();
+  }
+
+  private void NotifyWindowDisabler() {
+    if (OptionalWindowDisabler != null) {
+      OptionalWindowDisabler.Disable();
+    }
   }
 
   private void Transition(float from, float to) {
