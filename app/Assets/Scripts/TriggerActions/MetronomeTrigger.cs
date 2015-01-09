@@ -11,6 +11,7 @@ public class MetronomeTrigger : MonoBehaviour {
 
   IEnumerator DelayThenTick() {
     yield return new WaitForSeconds(DelayInSeconds);
+    Debug.Log("Delay");
     Action.Act();
     StartCoroutine(DelayThenTick());
   }
