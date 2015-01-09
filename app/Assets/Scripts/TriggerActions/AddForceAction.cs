@@ -7,10 +7,12 @@ public class AddForceAction : ActionBase {
   public Vector3 Torque;
   public Vector3 RelativeTorque;
 
+  public ForceMode ForceMode = ForceMode.Force;
+
   public override void Act() {
-    rigidbody.AddForce(Force);
-    rigidbody.AddRelativeForce(RelativeForce);
-    rigidbody.AddTorque(Torque);
-    rigidbody.AddRelativeTorque(RelativeTorque);
+    rigidbody.AddForce(Force, ForceMode);
+    rigidbody.AddRelativeForce(RelativeForce, ForceMode);
+    rigidbody.AddTorque(Torque, ForceMode);
+    rigidbody.AddRelativeTorque(RelativeTorque, ForceMode);
   }
 }
