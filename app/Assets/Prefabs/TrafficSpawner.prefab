@@ -40,7 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f81a8c6d4a6415daa3a2b36b131618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayInSeconds: 1
+  StartingDelay: .5
+  TickDelay: .5
   Action: {fileID: 11431714}
 --- !u!114 &11431714
 MonoBehaviour:
