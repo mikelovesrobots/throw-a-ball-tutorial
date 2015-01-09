@@ -2,11 +2,15 @@ using UnityEngine;
 using System.Collections;
 
 public class EnterColliderTrigger : TriggerBase {
+  public bool RequireTag;
   public string Tag;
 
   void OnCollisionEnter(Collision collision) {
-    Debug.Log("Collided");
-    if (collision.gameObject.tag == Tag) {
+    if (RequireTag) {
+      if (collision.gameObject.tag == Tag) {
+        action.Act();
+      }
+    } else {
       action.Act();
     }
   }
