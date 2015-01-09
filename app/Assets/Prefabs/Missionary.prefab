@@ -11,6 +11,10 @@ GameObject:
   - 54: {fileID: 5486528}
   - 114: {fileID: 11419244}
   - 114: {fileID: 11419150}
+  - 65: {fileID: 6559210}
+  - 114: {fileID: 11459208}
+  - 114: {fileID: 11448342}
+  - 114: {fileID: 11459210}
   m_Layer: 0
   m_Name: Missionary
   m_TagString: Untagged
@@ -35,24 +39,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &186528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 486528}
-  - 65: {fileID: 6586528}
-  - 114: {fileID: 11480824}
-  - 114: {fileID: 11480826}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &486524
 Transform:
   m_ObjectHideFlags: 1
@@ -64,7 +50,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486526}
-  - {fileID: 486528}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &486526
@@ -79,18 +64,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486524}
   m_RootOrder: 0
---- !u!4 &486528
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 486524}
-  m_RootOrder: 1
 --- !u!23 &2386528
 Renderer:
   m_ObjectHideFlags: 1
@@ -133,12 +106,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6586528
+--- !u!65 &6559210
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186528}
+  m_GameObject: {fileID: 186524}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -173,25 +146,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: {fileID: 11419150}
---- !u!114 &11480824
+--- !u!114 &11448342
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186528}
+  m_GameObject: {fileID: 186524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72463a56e29ba47809e55a383b3aee9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11459210}
+--- !u!114 &11459208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186524}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2d662d3f9ed545ae9b700039ab9c12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: 11480826}
+  action: {fileID: 11448342}
   Tag: Vehicle
---- !u!114 &11480826
+--- !u!114 &11459210
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186528}
+  m_GameObject: {fileID: 186524}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e632decd6acf4151bd8c4f5f3ed0782, type: 3}
