@@ -800,8 +800,49 @@ Transform:
   m_Children:
   - {fileID: 1033348497}
   - {fileID: 1009273472}
+  - {fileID: 490164510}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &490164509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 490164510}
+  - 114: {fileID: 490164511}
+  m_Layer: 0
+  m_Name: ScoreRepository
+  m_TagString: ScoreRepository
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490164510
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 490164509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470849838}
+  m_RootOrder: 2
+--- !u!114 &490164511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 490164509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e387dfa4080549ae94f34a17b1c2081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 0
 --- !u!1 &509037964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2379,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1580452900}
   - 114: {fileID: 1580452901}
+  - 114: {fileID: 1580452902}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -2418,6 +2460,18 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &1580452902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580452899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69fc5f6a183a416293663bb19b9e9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UILabel: {fileID: 1580452901}
 --- !u!1 &1612691728
 GameObject:
   m_ObjectHideFlags: 0
