@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453762}
   - 54: {fileID: 5418694}
-  - 114: {fileID: 11418696}
+  - 114: {fileID: 11453274}
   - 114: {fileID: 11418694}
   m_Layer: 0
   m_Name: SUV
@@ -297,7 +297,7 @@ MonoBehaviour:
   Torque: {x: 0, y: 0, z: 0}
   RelativeTorque: {x: 0, y: 0, z: 0}
   ForceMode: 0
---- !u!114 &11418696
+--- !u!114 &11453274
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbbc50000c0b45f6958e0890ade3627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: 0}
+  action: {fileID: 11418694}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
