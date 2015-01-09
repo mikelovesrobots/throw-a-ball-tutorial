@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: {x: 0, y: 0, z: 0}
-  RelativeForce: {x: 0, y: 0, z: 500}
+  RelativeForce: {x: 0, y: 0, z: 1500}
   Torque: {x: 0, y: 0, z: 500}
   RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!114 &11419244
