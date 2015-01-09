@@ -2,7 +2,12 @@ using UnityEngine;
 using System.Collections;
 
 public class EnterColliderTrigger : TriggerBase {
-  private void OnTriggerEnter(Collider other) {
-    Trigger();
+  public string Tag;
+
+  void OnCollisionEnter(Collision collision) {
+    Debug.Log("Collided");
+    if (collision.gameObject.tag == Tag) {
+      action.Act();
+    }
   }
 }

@@ -44,6 +44,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 486528}
   - 65: {fileID: 6586528}
+  - 114: {fileID: 11480824}
+  - 114: {fileID: 11480826}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -171,6 +173,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: {fileID: 11419150}
+--- !u!114 &11480824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d662d3f9ed545ae9b700039ab9c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11480826}
+  Tag: Vehicle
+--- !u!114 &11480826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e632decd6acf4151bd8c4f5f3ed0782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points: 100
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
