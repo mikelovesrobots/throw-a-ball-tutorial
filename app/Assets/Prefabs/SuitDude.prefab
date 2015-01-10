@@ -8,8 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455586}
+  - 65: {fileID: 6517368}
+  - 54: {fileID: 5417368}
+  - 114: {fileID: 11456936}
+  - 114: {fileID: 11456934}
   m_Layer: 0
-  m_Name: Missionary
+  m_Name: SuitDude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .954999983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455588}
@@ -84,6 +88,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155588}
   m_Mesh: {fileID: 4300000, guid: 088a36111562e4fdcbb9acfe6b5e9ab3, type: 3}
+--- !u!54 &5417368
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155586}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6517368
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155586}
+  m_Material: {fileID: 13400000, guid: 99e86ee0ad11f8d6d00011d98d76c639, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .797178388, y: 1.08957291, z: .394914895}
+  m_Center: {x: -.0363906175, y: .52343148, z: .0147547871}
+--- !u!114 &11456934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff994dab254452696207742473d79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Force: {x: 0, y: 0, z: 0}
+  RelativeForce: {x: 0, y: 0, z: 1600}
+  Torque: {x: 0, y: 0, z: 50}
+  RelativeTorque: {x: 0, y: 0, z: 0}
+  ForceMode: 0
+--- !u!114 &11456936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbbc50000c0b45f6958e0890ade3627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11456934}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
