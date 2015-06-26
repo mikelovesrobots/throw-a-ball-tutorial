@@ -2,21 +2,19 @@ using UnityEngine;
 using System.Collections;
 
 public class SpawnGameObjectAction : ActionBase {
-  public GameObject prefab;
-  public bool attachToSelf = false;
+    public GameObject Prefab;
+    public Transform Parent;
 
-  public bool isTemporary;
-  public float lifespan;
+    public bool IsTemporary;
+    public float Lifespan;
 
-  public override void Act() {
-    GameObject instance = GameObject.Instantiate(prefab, transform.position, transform.rotation) as GameObject;
+    public override void Act() {
+        GameObject instance = GameObject.Instantiate(Prefab, transform.position, transform.rotation) as GameObject;
 
-    if (isTemporary) {
-      GameObject.Destroy(instance, lifespan);
+        if (IsTemporary) {
+            GameObject.Destroy(instance, Lifespan);
+        }
+
+        instance.transform.parent = Parent;
     }
-
-    if (attachToSelf) {
-      instance.transform.parent = transform;
-    }
-  }
 }
