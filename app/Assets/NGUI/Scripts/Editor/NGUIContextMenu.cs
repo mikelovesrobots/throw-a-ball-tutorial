@@ -299,7 +299,7 @@ public static class NGUIContextMenu
 					NGUIContextMenu.AddSeparator("Attach/");
 				}
 			}
-			else if (target.collider == null)
+			else if (target.GetComponent<Collider>() == null)
 			{
 				AddItem("Attach/Box Collider", false, delegate(object obj) { NGUITools.AddWidgetCollider(target); }, null);
 				NGUIContextMenu.AddSeparator("Attach/");
@@ -317,7 +317,7 @@ public static class NGUIContextMenu
 				}
 			}
 
-			if (target.collider != null)
+			if (target.GetComponent<Collider>() != null)
 			{
 				if (scrollView != null)
 				{

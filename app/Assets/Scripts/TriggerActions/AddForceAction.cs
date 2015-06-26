@@ -10,9 +10,9 @@ public class AddForceAction : ActionBase {
   public ForceMode ForceMode = ForceMode.Force;
 
   public override void Act() {
-    rigidbody.AddForce(Force, ForceMode);
-    rigidbody.AddRelativeForce(RelativeForce, ForceMode);
-    rigidbody.AddTorque(Torque, ForceMode);
-    rigidbody.AddRelativeTorque(RelativeTorque, ForceMode);
+    GetComponent<Rigidbody>().AddForce(Force, ForceMode);
+    GetComponent<Rigidbody>().AddRelativeForce(RelativeForce, ForceMode);
+    GetComponent<Rigidbody>().AddTorque(Torque, ForceMode);
+    GetComponent<Rigidbody>().AddRelativeTorque(RelativeTorque, ForceMode);
   }
 }
